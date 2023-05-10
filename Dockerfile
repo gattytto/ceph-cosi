@@ -1,6 +1,6 @@
 FROM golang:latest AS builder
-COPY . ./
-RUN make build
+COPY . /
+RUN cd / && make build
 FROM gcr.io/distroless/static:latest
 LABEL maintainers="Ceph COSI Authors"
 LABEL description="Ceph COSI driver"
