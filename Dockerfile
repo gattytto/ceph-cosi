@@ -1,5 +1,5 @@
 FROM golang:latest AS builder
-COPY . /
+COPY . ./
 RUN make build
 FROM gcr.io/distroless/static:latest
 LABEL maintainers="Ceph COSI Authors"
